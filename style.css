@@ -1,0 +1,241 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: #1e88e5;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+#search {
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: none;
+  border-radius: 5px;
+}
+
+#toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#categories {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#categories button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #eeeeee;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#categories button:hover {
+  background-color: #d0d0d0;
+}
+
+#news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.news-card {
+  background-color: white;
+  width: 300px;
+  margin: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.news-card:hover {
+  transform: scale(1.02);
+}
+
+.news-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-card .content {
+  padding: 15px;
+}
+
+.news-card h2 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.news-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Modo escuro */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark header {
+  background-color: #333;
+}
+
+body.dark .news-card {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  #search {
+    width: 90%;
+  }
+
+  .news-card {
+    width: 90%;
+  }
+
+  #toggle-theme {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.topo {
+  background-image: url("images/pngtree-television-news-background-image_909008.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+  position: relative;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* escurece a imagem */
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.topo h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+body.dark .topo {
+  background-image: url("images/pngtree-television-news-background-image_909008.png"); /* mesma imagem, mas escurecida pela overlay */
+}
+
+
+.overlay {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.search-bar i {
+  color: white;
+  font-size: 18px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: none;
+  border-radius: 5px;
+}
+
+.social-icons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons i {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+}
+
+.headline {
+  margin-top: 20px;
+  font-size: 18px;
+  font-style: italic;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.datetime {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body.dark .search-bar i,
+body.dark .social-icons i,
+body.dark .headline,
+body.dark .datetime {
+  color: #eee;
+}
+
+body.dark .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

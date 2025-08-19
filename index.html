@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notícias do Dia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="overlay">
+      <h1>🗞️ Notícias do Dia</h1>
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" id="search" placeholder="Buscar notícia..." />
+      </div>
+      <div id="categories">
+        <button data-category="Todos">Todos</button>
+        <button data-category="Tecnologia">Tecnologia</button>
+        <button data-category="Clima">Clima</button>
+        <button data-category="Esportes">Esportes</button>
+      </div>
+      <div class="headline" id="headline"></div>
+      <div class="datetime" id="datetime"></div>
+    </div>
+    <button id="toggle-theme">🌙</button>
+    <div class="social-icons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </header>
+
+  <main id="news-container">
+    <!-- Cards de notícias serão inseridos aqui -->
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
